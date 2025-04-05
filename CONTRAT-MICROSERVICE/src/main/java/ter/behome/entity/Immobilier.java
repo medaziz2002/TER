@@ -1,5 +1,6 @@
 package ter.behome.entity;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class Immobilier {
@@ -10,13 +11,13 @@ public class Immobilier {
         String description;
         String localisation;
         BigInteger surface;
-        BigInteger price;
+        BigDecimal price;
 
     public Immobilier(){
         super();
     }
 
-    public Immobilier(String ownerAddress, String name, String description,String localisation, BigInteger surface, BigInteger price) {
+    public Immobilier(String ownerAddress, String name, String description,String localisation, BigInteger surface, BigDecimal price) {
         this.ownerAddress = ownerAddress;
         this.name = name;
         this.description = description;
@@ -25,7 +26,7 @@ public class Immobilier {
     }
 
 
-    public Immobilier(BigInteger id , String ownerAddress, String name, String description,String localisation, BigInteger surface, BigInteger price) {
+    public Immobilier(BigInteger id , String ownerAddress, String name, String description,String localisation, BigInteger surface, BigDecimal price) {
         this.id=id;
         this.ownerAddress = ownerAddress;
         this.name = name;
@@ -74,11 +75,11 @@ public class Immobilier {
         this.surface = surface;
     }
 
-    public BigInteger getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(BigInteger price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -97,4 +98,5 @@ public class Immobilier {
     public void setBuyerAddress(String buyerAddress) {
         this.buyerAddress = buyerAddress;
     }
+
 }
